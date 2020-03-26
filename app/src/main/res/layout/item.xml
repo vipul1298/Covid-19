@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@android:color/holo_orange_light"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:paddingLeft="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/background_dark"
+                android:paddingTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="Confirmed Indians: "/>
+
+            <TextView
+                android:id="@+id/num_people"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:layout_height="wrap_content"
+                android:hint="no.of indians "
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap for more info->"
+            android:textColor="@android:color/background_dark"
+            android:textAlignment="textEnd"
+            android:paddingTop="30dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

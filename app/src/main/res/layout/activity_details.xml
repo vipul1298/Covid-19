@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#777E8B"
+    android:layout_height="wrap_content"
+    tools:context=".Details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+"
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginBottom="15dp"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:paddingBottom="7dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="ConfirmedCasesIndian:"
+                android:textColor="#000"
+                android:textSize="23sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/m_indian"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:hint="indian"
+                android:textColorHint="#fff"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/myview"
+            android:layout_marginLeft="15dp"
+            android:layout_width="265dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            />
+
+        <LinearLayout
+            android:paddingBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="ConfirmedCasesForeign:"
+                android:textColor="#000"
+                android:textSize="23sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/m_foreign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="23sp"
+                android:hint="foreign"
+                android:textColorHint="#fff"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/myview1"
+            android:layout_marginLeft="15dp"
+            android:layout_width="265dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            />
+
+        <LinearLayout
+            android:paddingBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Discharged:"
+                android:textColor="#000"
+                android:textSize="23sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/m_discharged"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="23sp"
+                android:hint="disch"
+                android:textColorHint="#fff"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/myview2"
+            android:layout_marginLeft="15dp"
+            android:layout_width="265dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Deaths:"
+                android:textColor="#000"
+                android:textSize="23sp"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/m_deaths"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="23sp"
+                android:hint="deaths"
+                android:textAlignment="center"
+                android:textColorHint="#fff"/>
+
+        </LinearLayout>
+        <View
+            android:id="@+id/myview3"
+            android:layout_marginLeft="15dp"
+            android:layout_width="265dp"
+            android:layout_height="1dp"
+            android:background="#000"
+            />
+
+        <Button
+            android:id="@+id/knowbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Know more about Covid-19"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/border"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
