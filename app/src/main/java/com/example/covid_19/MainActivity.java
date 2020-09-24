@@ -6,12 +6,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -63,17 +71,53 @@ public class MainActivity extends AppCompatActivity {
         foreigner_case=findViewById(R.id.total_foreigner);
         discharged=findViewById(R.id.dischared);
         total_deaths=findViewById(R.id.deaths);
+
         title=findViewById(R.id.mTitle);
 
-        loadurl();
+        title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Alert();
+            }
+        });
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        if(networkInfo==null || !networkInfo.isConnected() || !networkInfo.isAvailable()){
+
+            Dialog dialog = new Dialog(this);
+
+            dialog.setContentView(R.layout.alert_dialog);
+            dialog.setCanceledOnTouchOutside(false);
+
+            dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            dialog.getWindow().getAttributes().windowAnimations = android.R.style.Animation_Dialog;
+
+            Button btn = dialog.findViewById(R.id.connection);
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    recreate();
+                }
+            });
+
+            dialog.show();
+
+        }else{
+            loadurl();
+        }
+
+
+
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Alert();
-    }
+
 
     public void loadurl(){
         URL_Data="https://api.rootnet.in/covid19-in/stats/latest";

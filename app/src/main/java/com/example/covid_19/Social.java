@@ -24,6 +24,7 @@ public class Social extends AppCompatActivity {
         progress.setIndeterminate(false);
         progress.setCancelable(false);
         progress.show();
+
         web.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
